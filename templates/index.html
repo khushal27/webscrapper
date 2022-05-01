@@ -1,0 +1,27 @@
+
+
+
+{% block head %}
+
+<title>iNeuron</title>
+<link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+{% endblock %}
+
+{% block body %}
+<div class="content">
+    <h1 style="text-align: center">iNeuron</h1>
+
+    <div class="form">
+        <form action="/teachers" method="POST">
+            <label for="operation">Choose Data</label>
+            <select id="operation" name="operation">
+              <option value="courses">courses</option>
+              <option value="subcourses">subcourses</option>
+              <option value="MainTopics">MainTopics</option>
+              <option value="Instructor">Instructor</option>
+            </select>
+            <input type="submit" value="Calculate">
+        </form>
+    </div>
+</div>
+{% endblock %}

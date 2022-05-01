@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en" >
+
+<head>
+  <meta charset="UTF-8">
+  <title>Review Page</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+      <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+
+<body>
+  <div class="table-users">
+    <table>
+        <tr>
+
+            <th>Name</th>
+            <th>Email</th>
+            <th>BioData</th>
+        </tr>
+        {% for teacher in teachers %}
+        <tr>
+            <th>{{teacher['Name']}}</th>
+            <th>{{teacher['Email']}}</th>
+            <th>{{teacher['Bio']}}</th>
+        </tr>
+        {% endfor %}
+    </table>
+</div>
+</body>
